@@ -52,7 +52,7 @@ run volumeicon &
 #nitrogen --restore &
 #run caffeine &
 #run vivaldi-stable &
-#run firefox &
+# run firefox &
 # run thunar &
 #run dropbox &
 #run insync start &

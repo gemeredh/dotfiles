@@ -118,11 +118,18 @@ super + shift + d
 
 #dmen
 super + d
-    rofi -show drun 
+    rofi -show drun
 
 #reload sxhkd:
-    super + shift + s
+super + shift + s
     pkill -USR1 -x sxhkd
+
+# Hide/Unhide Window
+super + z
+    bspc node focused -g hidden=on
+
+super + shift + z
+    bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
 
 #Keyboard dependent
 #super + shift + KP_Enter
@@ -250,7 +257,7 @@ alt + F3
 
 #Xlunch app launcher
 #alt + F5
-#    xlunch --config ~/.config/xlunch/default.conf --input ~/.config/xlunch/entries.dsv   
+#    xlunch --config ~/.config/xlunch/default.conf --input ~/.config/xlunch/entries.dsv
 
 
 #################################################################

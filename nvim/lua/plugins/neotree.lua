@@ -13,7 +13,7 @@ return {
     require('neo-tree').setup {
       window = {
         positon = "left",
-        width = 40,
+        width = 30,
       },
       source_selector = {
         winbar = false,
@@ -28,7 +28,6 @@ return {
       filesystem = {
         hide_gitignored = false,
       }
-      
     }
   end,
 }

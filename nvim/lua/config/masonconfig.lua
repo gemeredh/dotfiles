@@ -54,7 +54,8 @@ local servers = {
   pyright = {},
   --rust_analyzer = {},
   tsserver = {},
-
+  emmet_ls ={},
+  html={},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },

@@ -15,4 +15,4 @@ op.timeout = true
 op.completeopt = "menuone,noselect"
 op.termguicolors = true
 op.numberwith = 1
-op.sw=2
+op.tabstop=4

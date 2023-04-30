@@ -1,6 +1,6 @@
 local map = vim.keymap.set
 
-map('n','<leader>q',":q<CR>")
+map('n','<leader>q',":q<CR>",{desc = "q Close archive"})
 map('n','<leader>w',":w<CR>")
 
 --map('n','<leader>?', require('telescope.builtin'.oldfiles))- [[ Basic Keymaps ]]

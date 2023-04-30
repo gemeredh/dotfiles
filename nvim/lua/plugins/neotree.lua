@@ -27,7 +27,17 @@ return {
       },
       filesystem = {
         hide_gitignored = false,
+      },
+      event_handlers ={
+        {
+          event = "file_opened",
+          handler = function (file_path)
+            --autoclose
+            require("neo-tree").close_all()
+          end
+        }
       }
+
     }
   end,
 }

@@ -65,4 +65,13 @@ map('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnostic message
 map('n', '<leader>e', vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 map('n', '<leader>d', vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
+-- Neotree
 map('n', '<leader>nt', ":Neotree<CR>")
+
+map('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })
+map('n', '<leader>rf', ':RunFile<CR>', { noremap = true, silent = false })
+map('n', '<leader>rft', ':RunFile tab<CR>', { noremap = true, silent = false })
+map('n', '<leader>rp', ':RunProject<CR>', { noremap = true, silent = false })
+map('n', '<leader>rc', ':RunClose<CR>', { noremap = true, silent = false })
+map('n', '<leader>crf', ':CRFiletype<CR>', { noremap = true, silent = false })
+map('n', '<leader>crp', ':CRProjects<CR>', { noremap = true, silent = false })

@@ -1,5 +1,6 @@
+require('code_runner').setup({
   -- put here the commands by filetype
-filetype = {
+  filetype = {
     java = {
       "cd $dir &&",
       "javac $fileName &&",
@@ -12,4 +13,6 @@ filetype = {
       "rustc $fileName &&",
       "$dir$fileNameWithoutExt"
     },
-	}
+    go = "go run $fileName"
+  },
+})

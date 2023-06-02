@@ -17,7 +17,7 @@ return {
       },
       source_selector = {
         winbar = false,
-        statusline = false
+        statusline = false,
       },
       indent = {
         with_marker = true,
@@ -36,7 +36,8 @@ return {
             require("neo-tree").close_all()
           end
         }
-      }
+      },
+      winbar = false
 
     }
   end,

@@ -3,6 +3,6 @@ return{ -- Highlight, edit, and navigate code
   dependencies = {
   'nvim-treesitter/nvim-treesitter-textobjects',
 },
-build = ":TSUpdate",
+build= ":TSUpdate",
 }
 

@@ -1,8 +1,10 @@
 local map = vim.keymap.set
+local nvim_tmux_nav = require('nvim-tmux-navigation')
 
-map('n','<leader>q',":q<CR>",{desc = "q Close archive"})
-map('n','<leader>w',":w<CR>")
-
+map('n','<leader>qq',":q<CR>",{desc = "[Q]uit document"})
+map('n', '<leader>qa',":qa<CR>",{desc = "[Q]uit [A]ll"})
+map('n','<leader>wd',":w<CR>",{desc =" [W]rite [D]ocument"})
+map('t', '<Esc>', "<C-\\><C-N>")
 --map('n','<leader>?', require('telescope.builtin'.oldfiles))- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
@@ -41,6 +43,7 @@ require('telescope').setup {
 pcall(require('telescope').load_extension, 'fzf')
 
 -- See `:help telescope.builtin`
+map('n',";", require('telescope.builtin').command_history,{})
 map('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 map('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 map('n', '<leader>/', function()
@@ -68,10 +71,24 @@ map('n', '<leader>d', vim.diagnostic.setloclist, { desc = "Open diagnostics list
 -- Neotree
 map('n', '<leader>nt', ":Neotree<CR>")
 
-map('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })
+map('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false }, {desc = "[R]un Code"})
 map('n', '<leader>rf', ':RunFile<CR>', { noremap = true, silent = false })
 map('n', '<leader>rft', ':RunFile tab<CR>', { noremap = true, silent = false })
 map('n', '<leader>rp', ':RunProject<CR>', { noremap = true, silent = false })
 map('n', '<leader>rc', ':RunClose<CR>', { noremap = true, silent = false })
 map('n', '<leader>crf', ':CRFiletype<CR>', { noremap = true, silent = false })
 map('n', '<leader>crp', ':CRProjects<CR>', { noremap = true, silent = false })
+
+
+
+map('n', "<C-h>", nvim_tmux_nav.NvimTmuxNavigateLeft)
+map('n', "<C-j>", nvim_tmux_nav.NvimTmuxNavigateDown)
+map('n', "<C-k>", nvim_tmux_nav.NvimTmuxNavigateUp)
+map('n', "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
+map('n', "<C-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive)
+map('n', "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
+
+
+-- Git
+map("n", "<leader>gs", ":Git status<CR>", {desc = "[G]it [S]tatus"})
+

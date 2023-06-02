@@ -37,3 +37,10 @@ vim.api.nvim_create_autocmd({ "BufWritePre"}, {
 		vim.cmd [[%s/\s\+$//e]]
 	end,
 })
+
+-- erase all inesesarie tabs or space
+vim.api.nvim_create_autocmd({"BufWritePre"},{
+	callback = function ()
+		vim.cmd [[%s/\s\+$//e]]
+	end,
+})

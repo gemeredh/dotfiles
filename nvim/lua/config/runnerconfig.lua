@@ -1,4 +1,10 @@
 require('code_runner').setup({
+  mode = "toggleterm",
+  startinsert = true,
+  term ={
+    size = 6
+
+  },
   -- put here the commands by filetype
   filetype = {
     java = {

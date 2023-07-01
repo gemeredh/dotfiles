@@ -1,1 +1,1 @@
-/usr/share/backgrounds/archlinux-login-backgrounds/background30.jpg
+/home/gemer/.config/variety/Favorites/background30.jpg
